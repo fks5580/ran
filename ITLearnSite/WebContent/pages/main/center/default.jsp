@@ -182,7 +182,7 @@ $(window).load(function() {
 					<div class="owl-slide-3 owl-carousel">
 						<div class="course-1-item">
 							<figure class="thumnail">
-								<a href="${path}/lectureList.lec"><img src="pages/main/center/lecture/temp/java강의.png" alt="Image" class="img-fluid"></a>
+								<a href="${path}/lectureList.lec"><img src="images/java강의.png" alt="Image" class="img-fluid"></a>
 								<div class="price">50000원</div>
 								<div class="category">
 									<h3>java 강의</h3>
@@ -191,7 +191,7 @@ $(window).load(function() {
 						</div>
 						<div class="course-1-item">
 							<figure class="thumnail">
-								<a href="${path}/lectureList.lec"><img src="pages/main/center/lecture/temp/c강의.png" alt="Image" class="img-fluid"></a>
+								<a href="${path}/lectureList.lec"><img src="images/c강의.png" alt="Image" class="img-fluid"></a>
 								<div class="price">50000원</div>
 								<div class="category">
 									<h3>c언어 강의</h3>
@@ -200,7 +200,7 @@ $(window).load(function() {
 						</div>
 						<div class="course-1-item">
 							<figure class="thumnail">
-								<a href="${path}/lectureList.lec"><img src="pages/main/center/lecture/temp/oracle강의.png" alt="Image" class="img-fluid"></a>
+								<a href="${path}/lectureList.lec"><img src="images/oracle강의.png" alt="Image" class="img-fluid"></a>
 								<div class="price">50000원</div>
 								<div class="category">
 									<h3>oracle 강의</h3>
