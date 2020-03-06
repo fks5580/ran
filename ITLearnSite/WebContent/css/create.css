@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+  .form{
+	width: 1300px;
+	margin-left: 300px;
+	}
+ .left{
+ 	margin-top: 50px;
+ 	margin-left: 50px;
+ 	padding-right: 20px;
+ 	margin-right: 40px;
+ 	margin-bottom: 50px;
+ 	border-right: solid;
+ 	border-color: #353535;
+ 	text-decoration: none;
+ }
+ .right{
+ 	margin-top: 50px;
+ 	margin-right: 50px;
+ 	width: 600px;
+ }
+ .btn_right{
+ 	margin-left: 500px;
+ 	margin-top: 20px;
+ 	margin-bottom: 20px;
+ }
+ .row_line{
+ 	border-style:solid;
+ 	border-color: #353535;
+ }
+ .pay_position{
+ 	margin-top: 150px;
+ 	text-align: right;
+ }
+ 
+ .form-text{
+ 	height: 30px;
+ 	width: 400px;
+ 	background-color: B4B5B6;
+ }
+
+ hr{
+ 	border-color: #353535;
+ }
+ 
+ h5{
+ 	color: 0CB280;
+ }
+ 
+ .post_position{
+ 	margin-left: 260px;
+ 	margin-bottom: 10px;
+ 	width: 100px;
+ 	font-size: small;
+ }
+
+.before{
+	min-height: 1000px;
+	width:600px;
+	border-style: solid;
+	border-color: #353535;
+}
+.after{
+	min-height: 1000px;
+	width:600px;
+	border-style: solid;
+	border-color: #353535;
+}
+
+/*cart*/
+.num{
+	width: 10%;
+}
+.pro_img{
+	width: 100px;
+	height: 100px;
+}
+.tablesize{
+	min-height: 100px;
+	min-width: 800px;
+}
+
+/*paymentCheck*/
+.check_left{
+	margin-right:100px;
+ 	margin-bottom: 50px;
+ 	max-width: 900px;
+ 	overflow: scroll;
+ 	height:800px;
+}
+.check_right{
+ 	margin-right: 100px;
+ 	max-width: 900px;
+	overflow: scroll;
+	height:800px;
+}
+.row_padding{
+	padding-left:50px;
+}
+

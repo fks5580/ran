@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<Context>
+	<!-- 톰캣 실행시 커넥션풀로  연결할 DB정보를 설정 하는 소스 -->
+	<Resource     
+	 name="jdbc/oracle"
+	 auth="Container"
+	 type="javax.sql.DataSource"
+	 driverClassName="oracle.jdbc.OracleDriver"
+	 url="jdbc:oracle:thin:@localhost:1521:xe"
+	 username="c##ranid"
+	 password="ranpass"
+	 maxActive="50"
+	 maxWait="-1"
+	/>
+</Context>

@@ -1,0 +1,71 @@
+.container{
+/*     border: solid purple 1px; */
+
+}
+
+.wrap{
+    width:1200px;
+    min-height: 700px;
+/*     border: solid orange 1px; */
+    margin-bottom: 100px;
+}
+.picture{
+	float:left;
+    width: 130px;
+    height: 180px;
+/*     border: solid red 1px; */
+}
+.imgwrap{
+	margin-right:30px;
+}
+.img1{
+    float:left;
+    width: 130px;
+    height: 180px;
+/*     border: solid red 1px; */
+}
+
+.info{
+    width:100%;
+    height:700px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+/*     border: solid black 1px; */
+}
+
+.info_left{
+    width:800px;
+    float:left;
+/*     border: solid green 1px; */
+}
+
+
+.label{
+/*     border: solid skyblue 1px;  */
+}
+.label1{
+	width:300px;
+}
+.col-margin{
+	width: 100% !important;
+    margin-bottom: 10px;
+/*     border:solid gray 1px; */
+}
+
+.col-margin > p{
+	width : 800px;
+	height: auto;
+}
+
+.bookcontent{
+    margin-left: 130px;
+    float:left;
+    width: 800px;
+    height:auto;
+/*     border : solid yellow 1px; */
+}
+
+/*추가*/
+@font-face { font-family: 'NIXGONM-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+body{font-family: 'NIXGONM-Vb';}

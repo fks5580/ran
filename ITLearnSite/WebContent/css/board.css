@@ -1,0 +1,140 @@
+/*add css*/
+/*������ ���� �ٱ� ������ ����*/
+.gi-2x{
+	font-size: 2em;
+}
+.pagemargin {
+	margin-top: 100px;
+	margin-bottom : 100px;
+/* 	border: solid blue; */
+	width:auto;
+	align-content: center;
+	justify-content: center;
+	display: flex;
+}
+/*�Խ����� 4��� ���� �� : 
+	1. ��ü�� / glyphicon (�۾��� ��ư)
+	2. �Խ��� ����Ʈ �κ�
+	3. ��ü�� / �۾��� ��ư
+	4. ����¡ ��ȣ
+*/
+/*�Խ��� ��ü������ ���δ� �κ�*/
+.wrapboard {
+/* 	border: solid red; */
+	width: 1000px;
+}
+/*��ư�� ���δ� �κ�*/
+.btn-wrap {
+/* 	border: solid red; */
+	display: inline-block;
+	width: 1000px;
+}
+
+/*��ü��/glyphicon�� ���δ� ����*/
+.header-btn {
+/* 	border: solid black; */
+}
+/*float left/ float right ������ �����Ƿ� ���� ����*/
+.float-l {
+/* 	border: solid black; */
+	float: left;
+}
+
+.float-r {
+/* 	border: solid black; */
+	float: right;
+}
+.text-align{
+	text-align: center;
+}
+
+/*��ư ����*/
+.btn-color1 {
+	color: #fff;
+  	background-color: #4A56A8;
+ 	border-color: #4A56A8;
+}
+
+.boardoutline {
+	
+	width: 1000px;
+	height: inherit;
+/* 	border: solid black; */
+}
+
+.content {
+	text-align: center;
+	display: block;
+	width: auto;
+/* 	border: solid black; */
+}
+
+.tb_head {
+/* 	border: solid black; */
+}
+/*�Խ��� ��� �κ�*/
+thead {
+	color: black; /*�÷� �̸� ��*/
+	/* border-top: 2px solid #3C4790;  */
+	border-top: 2px solid #353535 !important;
+	border-spacing: auto 10px;
+}
+/*�Խ��� ���� �κ�/ �׵θ�*/
+.tb_head>td {
+	border-bottom: 2px solid #353535 !important;
+	/* border-bottom: 2px solid #3C4790; */
+}
+
+/* #noticethead{
+	border-top: 2px solid #353535 !important;
+}
+#noticethead>tr>td{
+	border-bottom: 2px solid #353535 !important;
+}
+ */
+
+
+.tb_head>td:nth-child(1) {
+	width: 150px;
+}
+
+.tb_head>td:nth-child(2) {
+	width: 500px;
+}
+
+.tb_head>td:nth-child(3) {
+	width: 200px;
+}
+
+.tb_head>td:nth-child(4) {
+	width: 150px;
+}
+
+/*select box*/
+.selectbox{
+	width: 130px;
+	height: 35px;
+	appearance:none;
+	-webkit-appearance:none;
+	background: url("../images/cursor.png") no-repeat right;
+	background-size: 30px 33px;
+}
+.selector-wrap{
+/* 	border:solid orange; */
+	display: inline-block;
+}
+.search-wrap{
+/* 	border:solid orange; */
+	display: inline-block;
+}
+.inputbox{
+	width: 300px;
+	height: 35px;
+}
+.box{
+	border: solid 3px #353535;
+}
+.lookimg{
+	margin-right : 12px;
+	position: absolute;
+}

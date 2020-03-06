@@ -1,0 +1,139 @@
+.pagewrap{
+    width: 1200px;
+    min-height: 600px;
+    margin:0 auto;
+    margin-top:30px; 
+    justify-content: center;
+    display: flex;
+    align-content: center;
+/*     border: solid blue 1px; */
+}
+.wrap{
+    width: 1000px;
+    height: 370px;
+/*     border: solid red; */
+    background-color: #F0F0F0;
+
+}
+.bookimg{
+    margin-left: 10px;
+   	margin-top : 7px;
+    float :left;
+    width:270px;
+    height:350px;
+}
+.bookimg>img{
+    width:270px;
+    height:350px;
+/*     border: solid red; */
+}
+.bookinfo{
+    margin-left:50px;
+    margin-top : 30px;
+    width: 640px;
+    height: 300px;
+    float:left;
+/*     border: solid red; */
+}
+
+.booktitle{
+    width:auto;
+    height:100px;
+/*     border: solid red; */
+    font-size: 2em;
+    font-weight:bold;
+    color:black;
+    float:left;
+}
+
+.bookdetail{
+    margin-left: 5px;
+    margin-top:20px;
+    width:48%;
+    float:left;
+/*     border: solid red; */
+}
+.detail-align{
+    margin-bottom: 10px;
+}
+.p1 {
+    display: inline;
+/*     border: solid red; */
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    color:black;
+}
+.p2{
+/*     border : solid red; */
+	margin-left:10px;
+    display: inline;
+    font-weight: 600;
+    font-size: 0.9em;
+    font-family: sans-serif;
+}
+.bookdetail2{
+	margin-top: 20px;
+    margin-left: 5px;
+    width:48%;
+    float:left;
+/*     border: solid red; */
+}
+.defaultimg{
+	margin-top : 0;
+	justify-content: center;
+    display: flex;
+    align-content: center;
+}
+.defaultimg>img{
+	
+/* 	border:solid red; */
+	width:770px;
+	height: 2367px;
+}
+
+.pagebottom{
+	width: 1200px;
+	min-height:300px;
+    margin:0 auto;
+    margin-top:30px; 
+    justify-content: center;
+    display: flex;
+    align-content: center;
+/*     border: solid blue 1px; */
+}
+.divide{
+	width : 770px;
+	min-height : 300px;
+}
+.divide>span, p{
+	font-weight: 700;
+	color:black;
+	font-size: 0.8em;
+}
+.index{
+    white-space: pre-wrap;
+    width:770px;
+	font-weight: 700;
+	color:black;
+	font-size: 0.8em;
+	text-align: left;
+	display: inline-block;
+}
+.author{
+/* 	border:solid red; */
+	width:770px;
+	margin-bottom: 30px;
+	font-weight: 700;
+	color:black;
+	font-size: 0.8em;
+}
+.description{
+/* 	border:solid red; */
+	width:770px;
+	margin-bottom: 30px;
+	font-weight: 700;
+	color:black;
+	font-size: 0.8em;
+}

@@ -1,0 +1,18 @@
+페이지 구성
+
+	BoardList.jsp
+		게시판 목록 보여주기
+			글 쓰기 - 로그인시
+			페이징
+			BoardWrite.jsp
+	BoardView.jsp
+		글 보기 페이지
+			글 수정 - 로그인시
+			BoardModify.jsp
+			글 삭제 - 로그인시
+			페이지 필요x
+			목록 - 비로그인 로그인 상관없이
+			
+
+	
+

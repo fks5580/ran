@@ -1,0 +1,40 @@
+p {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.showcaseHead .showcaseTitle {
+	display: inline-block;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: 500;
+	color: #000;
+	vertical-align: top;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.wrap .inner {
+	position: relative;
+	margin: 0 auto;
+	width: 1140px;
+}
+
+.showcaseWrap {
+	background: #eef7ff;
+}
+
+.showcaseHead .showcaseDescription {
+	display: inline-block;
+	margin-left: 58px;
+	font-size: 16px;
+	line-height: 40px;
+	color: #666;
+	vertical-align: top;
+}
+
+.showcaseHead .showcaseDescription em {
+	color: #0066b3;
+}
+
+:lang(ko) {
+	font-family: 'NanumGothic', 'Noto Sans KR', sans-serif;
+}
