@@ -8,7 +8,7 @@
 <style>
 .error{
 	margin-top: 100px;
-	margin-left: 150px;
+	margin-left: 350px;
 }
 .blk{
 	color: blue;

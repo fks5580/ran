@@ -10,50 +10,48 @@ import cart.db.CartDAOImpl;
 public class CartServiceImpl implements CartService{
 CartDAOImpl dao;
 
-public CartServiceImpl(){
-	dao= new CartDAOImpl();
-	
-}
-	
-	
+    public CartServiceImpl(){
+    	dao= new CartDAOImpl();
+    	
+    }
+    
+    //장바구니 조회
 	public ArrayList<CartBean> getcartlist(String email) {
-		System.out.println("cartlist service");	
 		ArrayList<CartBean> cartlist=dao.getcartlist(email);
 		return cartlist; 
 	}
 	
+	//장바구니 상품 추가
 	public int addCart(CartBean caBean){
 		int result=dao.addCart(caBean);
 		return result;
 		
 	}
 	
-	public int cartDupChk(String pro_name, String email){
-		System.out.println("cartDupChk");		
+	//장바구니 중복 체크
+	public int cartDupChk(String pro_name, String email){	
 		int result=dao.cartDupChk(pro_name, email);		
 		return result;
 	}
 	
-
-	
+	//장바구니 상품 개수 수정
 	public void cartEdit(int pro_cnt, int cart_num){
-		System.out.println("cartEdit");		
 		dao.editCart(pro_cnt, cart_num);
-	
-		
 	}
-	public int Delcart(int cart_num){
-		System.out.println("Delcart");
+	
+	//장바구니 상품 삭제
+	public int delcart(int cart_num){
 		int check=dao.delCart(cart_num);
 		return check;
 	}
 	
-	public int DelAllcart(String email){
-		System.out.println("delallcart");
+	//장바구니 상품 전체 삭제
+	public int delAllcart(String email){
 		int dch=dao.delAllCart(email);
 		return dch;
 	}
 	
+	//장바구니 담긴 갯수 확인
     public int cartMaxChk(String email){
     	int result1 = dao.cartMaxChk(email);
     	return result1;

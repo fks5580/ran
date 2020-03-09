@@ -13,7 +13,13 @@
 <title>회원관리</title>
 </head>
 <c:set var="email" value="${sessionScope.email}"></c:set>
-<c:if test="${email!='admin@admin.com'}">
+<c:if test="${email eq null}">
+	<script type="text/javascript">
+		alert("로그인 후 조회가능합니다.");
+		location.href="${path}/index.do";
+	</script>
+</c:if>
+<c:if test="${email ne 'admin@admin.com'}">
 	<script type="text/javascript">
 		alert("관리자만 조회 가능합니다.");
 		location.href="${path}/index.do";

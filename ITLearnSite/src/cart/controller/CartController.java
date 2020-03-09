@@ -148,7 +148,7 @@ public class CartController extends HttpServlet {
             // ##########장바구니 상품 삭제########## Start
 			else if (path.equals("/cartDelete.cart")) {
 				int cart_num = Integer.parseInt(request.getParameter("cart_num"));
-				int check = caServ.Delcart(cart_num);
+				int check = caServ.delcart(cart_num);
 				if (check != 0) {
 					PrintWriter out = response.getWriter();
 					response.setContentType("text/html; charset=UTF-8");
@@ -162,7 +162,7 @@ public class CartController extends HttpServlet {
 	        // ##########장바구니 상품 모두 삭제########## Start
 			} else if (path.equals("/cartAllDelete.cart")){
 				String email = (String) request.getSession().getAttribute("email");
-				int dch = caServ.DelAllcart(email);
+				int dch = caServ.delAllcart(email);
 				if (dch == 1) {
 					PrintWriter out = response.getWriter();
 					response.setContentType("text/html; charset=UTF-8");

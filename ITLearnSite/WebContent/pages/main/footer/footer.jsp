@@ -16,12 +16,7 @@
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>개발팀</span></h3>
             <ul class="list-unstyled">
-                <li>김혜란</li>
-                <li>배재영</li>
-                <li>김하은</li>
-                <li>문정빈</li>
-                <li>김수진</li>
-                <li>김태균</li>
+                <li>김혜란 외 5명</li>
             </ul>
           </div>
           <div class="col-lg-3">

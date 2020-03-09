@@ -49,11 +49,11 @@ public class PaymentDAOImpl implements PaymentDAO {
     	List<PaymentBean> paymentList = new ArrayList<PaymentBean>();
         try{
             con = getConnection();
-            sql = "select * from payment_table";
+            sql = "select * from payment_table order by pay_no asc";
             stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
             while(rs.next()){
-            	PaymentBean paymentBean = new PaymentBean();
+                PaymentBean paymentBean = new PaymentBean();
             	paymentBean.setPay_no(rs.getInt("pay_no"));
             	paymentBean.setPay_email(rs.getString("pay_email"));
             	paymentBean.setPay_name(rs.getString("pay_name"));
@@ -105,7 +105,7 @@ public class PaymentDAOImpl implements PaymentDAO {
     	List<PaymentBean> paymentList = new ArrayList<PaymentBean>();
         try{
             con = getConnection();
-            sql = "select * from payment_table where pay_email='"+email+"'";
+            sql = "select * from payment_table where pay_email='"+email+"' order by pay_no desc";
             stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
             while(rs.next()){

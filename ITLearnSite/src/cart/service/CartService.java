@@ -18,10 +18,10 @@ public interface CartService {
 	public void cartEdit(int pro_cnt, int cart_num);
 	
 	//장바구니 상품 전체 삭제
-	public int DelAllcart(String email);
+	public int delAllcart(String email);
 	
 	//장바구니 상품 삭제
-	public int Delcart(int cart_num);
+	public int delcart(int cart_num);
 	
 	//장바구니 담긴 갯수 확인
     public int cartMaxChk(String email);

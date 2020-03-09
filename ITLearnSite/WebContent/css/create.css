@@ -54,13 +54,13 @@
  }
 
 .before{
-	min-height: 1000px;
+	max-height: 800px;
 	width:600px;
 	border-style: solid;
 	border-color: #353535;
 }
 .after{
-	min-height: 1000px;
+	max-height: 800px;
 	width:600px;
 	border-style: solid;
 	border-color: #353535;
