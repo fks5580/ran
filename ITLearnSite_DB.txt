@@ -1,0 +1,268 @@
+/*회원 테이블*/
+create table member(
+email varchar2(40) primary key,
+pw varchar2(20) ,
+name varchar2(10) ,
+gender number(2) ,
+birth_year varchar2(10),
+birth_month varchar2(10),
+birth_day varchar2(10),
+phonenumber varchar2(20),
+address varchar2(10),
+address1 varchar2(100),
+address2 varchar2(100),
+sms number(2),
+auth varchar2(2) default 'N'
+);
+
+insert into member(email,pw,name,auth) values('admin@admin.com','1234','관리자','y');
+insert into member values
+('test@test.com','1234','회원1',1,'2000','12','12','010-1234-5678','49112','부산광역시 영도구 태종로 727 (동삼동, 한국해양대학교)','동삼동 1',1,'y');
+insert into member values
+('test1@test.com','1234','회원2',1,'1995','1','11','010-1234-5678','49112','부산광역시 영도구 태종로 727 (동삼동, 한국해양대학교)','동삼동 1',1,'y');
+
+/*자료실 테이블*/
+create table resource_table(
+res_no number(38) primary key,
+res_parentno number(38) default 0,
+res_title varchar2(50),
+res_email varchar2(40),
+res_content varchar2(1000),
+res_filename varchar2(50),
+res_writedate date default sysdate,
+constraint res_email_fk foreign key(res_email) references member(email)
+);
+
+insert into resource_table(res_no, res_title, res_email)
+values(1, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(2, 'asdf','admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(3, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(4, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(5, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(6, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(7, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(8, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(9, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(10, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(11, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(12, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(13, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(14, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(15, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(16, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(17, 'asdf', 'admin@admin.com');
+insert into resource_table(res_no, res_title, res_email)
+values(18, 'asdf', 'admin@admin.com');
+
+/*자료실 댓글 테이블*/
+create table resource_comments(
+co_no number(38) primary key,
+res_no number(38),
+co_email varchar2(100),
+co_date date default sysdate,
+co_content varchar2(1000),
+constraint res_no_fk foreign key(res_no) references resource_table(res_no) on delete cascade
+);
+
+/*이용문의 테이블*/
+create table question_table(
+ques_no number(38) primary key,
+ques_parentno number(38) default 0,
+ques_title varchar2(50),
+ques_email varchar2(40),
+ques_content varchar2(4000),
+isSecret varchar2(10),
+isNotice varchar2(10),
+ques_writedate date default sysdate,
+ques_readcount number(38),
+ques_ref number(38),
+ques_parentemail varchar2(40), 
+constraint ques_email_fk foreign key(ques_email) references member(email) on delete cascade
+);
+
+/*강의 테이블*/
+CREATE TABLE lecture_table (
+    product_no number(38),
+    lec_no           NUMBER(38) PRIMARY KEY,
+    lec_parentno     NUMBER(38) DEFAULT 0,
+    lec_title        VARCHAR2(50),
+    lec_price        NUMBER(38),
+    lec_teacher    VARCHAR2(50),
+    lec_content      VARCHAR2(4000),
+    lec_imgfile      VARCHAR2(50),
+    lec_spofile      VARCHAR2(50),
+    lec_uploaddate   DATE DEFAULT SYSDATE,
+    product_type varchar2(10) default '강의'
+);
+
+/*강의 업로드*/
+CREATE TABLE lecture_list (
+    list_no             NUMBER(38),
+    lec_no              NUMBER(38),
+    lec_title           VARCHAR2(50),
+    list_title          VARCHAR2(50),
+    list_savefile       VARCHAR2(50),
+    list_originalfile   VARCHAR2(50),
+    CONSTRAINT lec_no_fk FOREIGN KEY ( lec_no )
+        REFERENCES lecture_table ( lec_no )
+            ON DELETE CASCADE,
+    constraint ll_no_pk PRIMARY key (list_no, lec_no)
+);
+
+/*강의 댓글 테이블*/
+create table lecture_comment (
+    co_no number(38),
+    list_no number(38),
+    lec_no  number(38),
+    co_email varchar2(40),    
+    co_date date default sysdate,
+    co_content varchar2(100),
+   CONSTRAINT lec_com_fk FOREIGN KEY ( list_no, lec_no )
+        REFERENCES lecture_list ( list_no, lec_no )
+            ON DELETE CASCADE,
+            CONSTRAINT co_email_fk FOREIGN KEY ( co_email )
+        REFERENCES member ( email )    
+);
+
+
+
+/*교재게시판 테이블*/
+--시퀀스 생성
+create sequence book_product_Seq
+    start with 1
+    increment by 1;
+--drop SEQUENCE book_product_Seq;
+
+create table book_table(
+product_no number primary key, -- 상품 등록 번호로 조회
+book_title varchar2(1000), -- 책 제목
+book_link varchar(1000), -- 링크
+book_image varchar2(1000), -- 이미지 링크
+book_author varchar2(400), --  저자
+book_price number, --  가격
+book_discount number, --할인가
+book_publisher varchar2(30), -- 출판사
+book_pubdate date,--출판일                   
+book_isbn varchar2(30), -- pubdate
+book_description varchar2(4000),
+book_stock number,
+product_type varchar2(10) default '도서' -- 도서 타입
+);
+
+/*교재구매 후기 테이블*/
+create table book_comments(
+bo_no number(38),
+product_no number(38),
+bo_email varchar2(100),
+bo_date date default sysdate,
+bo_content varchar2(1000),
+bo_evaluation number,
+constraint bo_no_fk foreign key(product_no) references book_table(product_no) on delete cascade
+);
+
+/*장바구니 테이블*/
+CREATE TABLE CART_TABLE(
+    CART_NUM INT PRIMARY KEY,
+    EMAIL VARCHAR2(100),
+    product_no int,
+    PRO_NAME VARCHAR2(500) NOT NULL,
+    PRO_CNT NUMBER NOT NULL,
+    pro_price number not null,
+    PRO_SORT VARCHAR2(20) NOT NULL,
+    PRO_IMG VARCHAR2(400)
+);
+
+/*결제 테이블*/
+create table payment_table(
+pay_no number(38) primary key,
+pay_email varchar2(40),
+pay_name varchar2(50),
+pay_phonenumber varchar2(50),
+pay_address varchar2(50),
+pay_address1 varchar2(100),
+pay_address2 varchar2(100),
+pay_pro1_no number,
+pay_pro1_name varchar2(400),
+pay_pro1_cnt number,
+pay_pro1_price number,
+pay_pro1_sort varchar2(20),
+pay_pro2_no number,
+pay_pro2_name varchar2(400),
+pay_pro2_cnt number,
+pay_pro2_price number,
+pay_pro2_sort varchar2(20),
+pay_pro3_no number,
+pay_pro3_name varchar2(400),
+pay_pro3_cnt number,
+pay_pro3_price number,
+pay_pro3_sort varchar2(20),
+pay_pro4_no number,
+pay_pro4_name varchar2(400),
+pay_pro4_cnt number,
+pay_pro4_price number,
+pay_pro4_sort varchar2(20),
+pay_pro5_no number,
+pay_pro5_name varchar2(400),
+pay_pro5_cnt number,
+pay_pro5_price number,
+pay_pro5_sort varchar2(20),
+pay_total varchar2(4000),
+pay_option number(2),
+constraint pay_email_fk foreign key(pay_email) references member(email)
+);
+
+
+/*강의 구매 결제 확인 시 insert될 계정별 강의 리스트 테이블*/
+create table set_pay_lec_table(
+set_no number(3),
+set_email varchar2(40),
+set_lec_title varchar2(50),
+set_endDate date,
+constraint set_email_fk foreign key(set_email) references member(email)
+);
+
+/*테이블 모두 삭제
+drop sequence book_product_Seq;
+drop table lecture_comment;
+drop table lecture_list;
+drop table product_stock;
+drop table product_table;
+drop table cart_table;
+drop table lecture_table;
+drop table payment_table;
+drop table question_table;
+drop table resource_comments;
+drop table resource_table;
+drop table book_table;
+drop table set_pay_lec_table;
+drop table member;
+*/
+
+/* 테이블 조회
+select * from question_table;
+select * from payment_table;
+select * from cart_table;
+select * from member;
+select * from set_pay_lec_table;
+select * from lecture_table;
+select * from book_table;
+select * from resource_table;
+select * from resource_comments;
+*/
+commit;
